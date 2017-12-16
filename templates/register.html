@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+</head>
+<body>
+<h1>Welcome to Python Flask</h1>
+<table border="1">
+	<thead>
+	<tr>
+		<td>url</td>
+		<td>Category</td>
+	</tr>
+	</thead>
+	<tbody>
+	{% for item in forms %}
+	<tr>
+	<td><a href="{{ item[3] }}" target="_blank">Click here</a></td>
+	<td>{{ item[4] }}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+October 2017 Weekend
+
+pavan patharde
+Woohoo, no work due soon!
+VIEW ALL
+TOPICS
+Basics
+Database
+Functions
+Lists
+Projects
+Strings
+Testing
+
+Announcement: "WebCrawler Project"
+pavan patharde
+Created 10:34 AM10:34 AM
+Projects
+WebCrawler Project
+
+db.py
+Text
+
+intro.py
+Text
+
+sow.txt
+Text
+
+Add class comment…
+
+Announcement: "testing by class"
+pavan patharde
+Created Dec 3Dec 3
+Testing
+testing by class
+
+intro3.py
+Text
+
+intro2.py
+Text
+
+webtesting.py
+Text
+
+apitest.py
+Text
+
+Add class comment…
+
+Announcement: "URL :…"
+pavan patharde
+Created Dec 3Dec 3
+Testing
+URL : http://api.openweathermap.org/data/2.5/weather?q=Bangalore&appid=9a2c32bfb23a1672853bc23aba1f71b0&units=metric
+
+Add class comment…
+
+Announcement: "Class Notes"
+pavan patharde
+Created Nov 28Nov 28
+Database
+Class Notes
+
+notes.txt
+Text
+
+intro.py
+Text
+
+Add class comment…
+
+Announcement: "Test on Basics Continued at…"
+pavan patharde
+Created Nov 18Nov 18
+Test on Basics Continued at https://goo.gl/forms/r1rOnLmfeWhRICC62 Duration: 1 Hour Starts at 8:30 am
+
+Add class comment…
+
+Announcement: "Functions Notes"
+pavan patharde
+Created Nov 12Nov 12
+Functions
+Functions Notes
+
+funcscope2.py
+Text
+
+funcscope.py
+Text
+
+funcargs.py
+Text
+
+funcintro.py
+Text
+
+oddorevenfunc.py
+Text
+
+Add class comment…
+
+Assignment: "create a logpackage .. a module which contains read and write operation which writes and reads from log.txt. Outside of this logpackage create a module to use the package."
+pavan patharde
+Created Nov 11Nov 11
+MISSING
+Due Nov 11
+create a logpackage .. a module which contains read and write operation which writes and reads from log.txt. Outside of this logpackage create a module to use the package.
+OPEN
+
+Add class comment…
+
+Announcement: "Basics Test link…"
+pavan patharde
+Created Nov 4Nov 4
+Basics
+Basics Test link https://docs.google.com/forms/d/1tsWtbGQ9m55Og6ydVVI-DU9JF6vOfJviZuxKH1K__n0/edit?chromeless=1
+
+Add class comment…
+
+Assignment: "Write a program to print * * * * * * * * * * * * * * * * * * * * * * * * *"
+pavan patharde
+Created Oct 29Oct 29
+DONE
+Strings
+Due Nov 2
+Write a program to print * * * * * * * * * * * * * * * * * * * * * * * * *
+OPEN
+
+Add class comment…
+
+Assignment: "Write a Python program to check if given string is palindrome"
+pavan patharde
+Created Oct 29Oct 29
+DONE
+Strings
+Due Nov 2
+Write a Python program to check if given string is palindrome
+OPEN
+
+Add class comment…
+
+News Aggregator
+-- It collects news items from various sources. RSS(XML) Feeds.
+   TOI --> Top, Sports, Entertainment
+   e.g. <article><title></title><description></description></article>
+-- News items needs to be stored in database
+-- Simple CLI Interface to provide news to end users
+-- Scheduled job (celery)
+
+1. Top Stories
+2. Filter by category and limit
+3. Aggregate --> Ask for valid source
+
+
+Steps:
+1. Design the tables needed for storing data and sources.
+
+sources
+-- id   --> 1
+-- url  --> https://timesofindia.indiatimes.com/rssfeedstopstories.cms
+-- category --> top
+
+news
+-- id
+-- title
+-- description
+-- link
+-- category
+
+Scripts
+1. Aggregate
+2. CLI Interface
+
+2. Understand xml parsing using python.
+   After parsing get the news items title and desciption.
+   Store in respective tables.
+3. Write a CLI(command line) interface
+4. Understand how to create repetitive tasks using celery.
+
+SQL Queries:
+create table sources(id serial primary key, url varchar(200),category varchar(50))
+
+create table news(id serial primary key,title varchar(200),description varchar(500),post_link varchar(200),category varchar(50))
+
+insert into sources(url, category)values('https://timesofindia.indiatimes.com/rssfeedstopstories.cms', 'top')
+
+select * from sources;

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Home Page</title>
+</head>
+<body>
+<h1>Welcome to Python Flask</h1>
+<form action="intro.py" method="POST">
+  URL:<input type="text" name="URL"></br>
+  category:<input type="text" name="category"></br>
+  <input type="submit" name="login">
+</form>
+<table border="1">
+	<thead>
+	<tr>
+		<td>Title</td>
+		<td>Description</td>
+		<td>Link</td>
+		<td>Category</td>
+	</tr>
+	</thead>
+	<tbody>
+	{% for item in news %}
+	<tr>
+	<td>{{ item[1] }}</td>
+	<td>{{ item[2]|safe }}</td>
+	<td><a href="{{ item[3] }}" target="_blank">Click here</a></td>
+	<td>{{ item[4] }}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>
